@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "f1a64673-5da2-4ed3-af53-0d971fd550f3",
+		"name": "NttData-student-gencat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26131554"
+	},
+	"item": [
+		{
+			"name": "GetStudents",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm és un objecte postman, ens permetrà, entre d'altres\r",
+							"a accedir (lectura/escriptura) a les variables d'entorn */\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    /**Patró d'enginyeria del software fluent builder\r",
+							"     * \r",
+							"     * Fluent builder pattern is a style of coding which force the developer to create the object in sequence by calling each setter method one after the another until all required attributes are set.\r",
+							"     */\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/Student",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddStudent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*pm és un objecte postman, ens permetrà, entre d'altres\r",
+							"a accedir (lectura/escriptura) a les variables d'entorn */\r",
+							"pm.test(\"Status test\",function(){\r",
+							"    /**Patró d'enginyeria del software fluent builder\r",
+							"     * \r",
+							"     * Fluent builder pattern is a style of coding which force the developer to create the object in sequence by calling each setter method one after the another until all required attributes are set.\r",
+							"     */\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"Maribel\",\r\n  \"surname\": \"From Postman\",\r\n  \"age\": 80\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/Student",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Student"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
