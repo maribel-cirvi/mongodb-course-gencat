@@ -7,3 +7,7 @@ mongosh "127.0.0.1/school" scripts\GetStudents.js
 
 mongosh "mongodb+srv://cluster0.8mwtier.mongodb.net/school" --apiVersion 1 --username mongobel
 mongosh "mongodb+srv://cluster0.8mwtier.mongodb.net/school" --apiVersion 1 --username mongobel scripts\CreateSchoolSchema.js
+
+### Execute Postman files via Newman
+newman run NttData-student-gencat.postman_collection.json -e NttData-Student-PRO.postman_environment.json
+
